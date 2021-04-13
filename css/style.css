@@ -54,6 +54,7 @@ body {
     #todo-list {
         width: 100% !important;
     }
+    
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
