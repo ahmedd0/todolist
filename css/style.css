@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth;
+    min-height: 2000px;
+}
+
+body {
+    background: linear-gradient(180deg, #5f8df3, #00fdfd);
+}
+
+.checkbox {
+    background-color: #cccccc;
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.checkbox i {
+    font-size: 13px;
+    color: black;
+}
+
+.input-icon {
+    content: "aa";
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 35px;
+    background-color: #dc3545;
+    border-bottom-left-radius: .15rem;
+    border-top-left-radius: .15rem;
+
+
+
+
+
+}
+
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: none !important;
+}
+
+
+
+
+@media (max-width: 575.98px) {
+    #todo-list {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #todo-list {
+        width: 100% !important;
+    }
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    #todo-list {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #todo-list {
+        width: 70% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    #todo-list {
+        width: 50% !important;
+    }
+}
