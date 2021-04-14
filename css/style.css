@@ -1,25 +1,33 @@
 html {
     scroll-behavior: smooth;
-    min-height: 2000px;
 }
 
+
 body {
-    background: linear-gradient(180deg, #5f8df3, #00fdfd);
+    background: linear-gradient(180deg, #26468c, #85e3f3);
+    min-height: 100vh;
+
+}
+
+.listItem {
+    cursor: pointer;
+
 }
 
 .checkbox {
-    background-color: #cccccc;
+    background-color: #057642;
     height: 20px;
     width: 20px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+
 }
 
 .checkbox i {
     font-size: 13px;
-    color: black;
+    color: white;
 }
 
 .input-icon {
@@ -54,16 +62,16 @@ body {
     #todo-list {
         width: 100% !important;
     }
-    
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     #todo-list {
         width: 100% !important;
     }
- }
+}
 
-@media (min-width: 768px) and (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 991.98px) {
     #todo-list {
         width: 80% !important;
     }

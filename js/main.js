@@ -1,6 +1,7 @@
 // ======= GET HTML ELEMENT ===================
 var todoInput = document.getElementById("todoInput");
 var todoItems = document.getElementById("items");
+var listItem;
 var checkBox;
 // ======= GLOBAL VARIABLE  ======
 var items;
@@ -24,11 +25,15 @@ var crud = {
     }
   },
   display: function () {
+    console.log(items.length);
     var container = "";
     var check;
     for (let i = 0; i < items.length; i++) {
-      check = items[i].isCompleted ? `<i class="fas fa-check"></i>` : "";
-      container += `<li class="bg-white text-muted border-danger rounded p-2 mb-2 d-flex align-items-center"> <span class="checkbox">${check}</span> <span class="pl-2">${items[i].task}</span><li>`;
+      check = items[i].isCompleted
+        ? `<i class="fas fa-check text-white"></i>`
+        : "";
+      
+      container += `<li class="listItem bg-white text-muted border-danger rounded p-2 mb-2 d-flex align-items-center"><span class="checkbox">${check}</span><span class="pl-2">${items[i].task}</span></li>`;
     }
     todoItems.innerHTML = container;
     AddEventsToCheckBoxs();
@@ -50,10 +55,9 @@ function clearInput() {
 }
 
 function AddEventsToCheckBoxs() {
-  checkBox = document.getElementsByClassName("checkbox");
-  console.log(checkBox.length);
-  for (let i = 0; i < checkBox.length; i++) {
-    checkBox[i].addEventListener("click", function (e) {
+  listItem = document.getElementsByClassName("listItem");
+  for (let i = 0; i < listItem.length; i++) {
+    listItem[i].addEventListener("click", function (e) {
       if (items[i].isCompleted == true) {
         console.log("true");
         items[i].isCompleted = false;
@@ -62,7 +66,6 @@ function AddEventsToCheckBoxs() {
       }
       localStorage.setItem("list", JSON.stringify(items));
       crud.display();
-      console.log(checkBox);
     });
   }
 }
